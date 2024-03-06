@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-olive-950">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gondola Token</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <script>
+tailwind.config = {
+  darkMode: 'class', // Use 'class' strategy for dark mode
+  theme: {
+    extend: {
+      // Extend your theme here
+      colors: {
+        clifford: '#da373d',
+        // Custom brown palette
+        brown: {
+          50: '#f5f2ed', // very light brown
+          100: '#e6e0da',
+          200: '#d4c2b2',
+          300: '#c3a489',
+          400: '#b28761',
+          500: '#9a6a3d',
+          600: '#805232',
+          700: '#653e27',
+          800: '#4b2d1d',
+          900: '#321e13',
+		  950: '#2c1608', // very dark brown
+        },
+        // Earthy tones
+        olive: {
+          50: '#faf9f0', // very light olive
+          100: '#e8e6d3',
+          200: '#d2d0a3',
+          300: '#bbb873',
+          400: '#a4a044',
+          500: '#8c8825',
+          600: '#70701e',
+          700: '#555617',
+          800: '#3b3c10',
+          900: '#212209',
+		  950: '#1c1c0e', // very dark olive
+        },
+        // Additional colors or overrides for dark mode
+        dark: {
+          background: '#1a1a2e',
+          text: '#e5e5e5',
+          // You can add more custom dark mode colors here
+        }
+      },
+    },
+  },
+  variants: {
+    extend: {
+      // Extend your variants here if needed
+      // Adding custom variants for opacity utility in dark mode
+      opacity: ['dark']
+    },
+  },
+}
+  </script>
+  
+  <style>
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* <uniquifier>: Use a unique and descriptive class name
+   <weight>: Use a value from 300 to 800
+   */
+
+.open-sans-var {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 200;
+}
+  </style>
+</head>
+<body class="bg-olive-950 text-white font-sans">
+  <div id="app" class="md:mx-auto md:max-w-5xl">
+    
+    <!-- Navigation and Title -->
+	<!--
+    <div class="container mx-auto p-4">
+      <nav class="flex justify-between items-center">
+        <div>
+
+          <a href="#" class="text-brown-300 px-2 py-1">About</a>
+          <a href="#" class="text-brown-300 px-2 py-1">Tokenomics</a>
+          <a href="#" class="text-brown-300 px-2 py-1">Roadmap</a>
+        </div>
+        <div>
+
+          <a href="#" class="text-brown-400 px-2 py-1">X / Telegram</a>
+
+        </div>
+      </nav>
+  </div>
+-->
+      
+
+
+<nav class="bg-olive-950 border-gray-200 dark:bg-olive-950">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="src/assets/img/logo.jpeg" class="rounded-full h-8 border-2 border-white" alt="Flowbite Logo" />
+      <span class="self-center text-brown-100 text-2xl font-semibold whitespace-nowrap dark:text-white">GDLA</span>
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" class="text-white bg-brown-700 hover:bg-brown-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get $GDLA</button>
+      <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:block md:w-auto md:order-1" id="navbar-cta">
+    <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border w-full border-brown-600 rounded-lg bg-olive-950 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-olive-950 dark:bg-olive-950 md:dark:bg-olive-950 dark:border-gray-700">
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-brown-50 bg-brown-700 rounded md:bg-transparent md:text-brown-300 md:dark:text-blue-500" aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-brown-300 rounded hover:bg-brown-800 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-brown-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 d:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">How to buy</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-brown-300 rounded hover:bg-brown-800 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tokenomics</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 md:p-0 text-brown-300 rounded hover:bg-brown-800 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Roadmap</a>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+
+<!-- Main Content -->
+<div class="container mx-auto px-2 py-8">
+  <div class="flex flex-col lg:flex-row items-center justify-between">
+    
+    <!-- Character Image - Now First for Mobile View, Moves to the Right on Larger Screens -->
+    <div class="w-1/2 lg:w-[25rem] mt-8 lg:mt-0 lg:order-last" data-aos="fade-right" data-aos-duration="2000">
+      <img src="src/assets/img/gondola.svg" alt="Character" class="w-full h-auto">
+    </div>
+
+    <!-- Main Title - Remains as is for Mobile and Desktop -->
+    <div class="text-center lg:text-left px-4">
+      <h1 class="text-7xl lg:text-8xl lg:-ml-1 text-brown-50 p-0 m-0 font-bold">Gondola</h1>
+      <h2 class="text-lg lg:text-2xl">The Silent Blockchain Observer.</h2>
+      <p class="mt-4">Serenity in the crypto storm, embodying wu-wei with a smile as the silent walker amidst the blockchain bustle.</p>
+      <div class="mt-6">
+        <button class="bg-brown-500 text-white py-2 px-4 rounded-lg">Get $GDLA</button>
+        <button class="bg-brown-700 text-white py-2 px-4 rounded-lg ml-4">Dextools</button>
+      </div>
+      <div class="mt-6">
+       <!-- <p class="text-brown-600 text-xs">Contract:</p> -->
+        <p class="text-brown-500 text-xs">0x6982508445454ce825ddbf47a25d4ec3d2311933</p>
+      </div>
+    </div>
+
+  </div>
+	
+	 <!-- Additional Information Section -->
+    <section class="bg-olive-850 py-8">
+      <div class="container mx-auto px-4">
+		  <h2 class="text-lg text-brown-100 font-bold">About</h2>
+        <h2 class="text-lg text-brown-100 font-bold">The Silent Blockchain Observer.</h2>
+          <p class="text-brown-100 mt-4">
+            In the bustling world of crypto, where every token shouts louder than the last, Gondola takes a different approach. It is the silent walker of the blockchain, observing the frenzied market with a serene smile. It does not chase the hype nor does it partake in the frantic FOMO. Much like its namesake, Gondola embodies the principle of wu-wei — a token that thrives on non-action and steady growth.
+          </p>
+        <h2 class="text-lg text-brown-100 font-bold mt-6">Gondola was not a mistake</h2>
+		  <p class="text-brown-100 mt-4">
+		  While others rush to memes for quick gains, Gondola understands the long journey. It’s the quiet hodler in your wallet, offering a tranquil presence amidst the volatility. 
+		  </p>
+		  <p class="text-brown-100 mt-4">
+		  While spurdo spasms with feelings and Pepe hops between moods, GondolaToken remains the steadfast observer, content and ever-smiling.
+</p>
+<p>{{ hello }}</p>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-transparent py-4 mt-8 md:bottom-0">
+      <p class="text-center text-white">Join the relaxed, harmless, observant community.</p>
+    </footer>
+
+  </div>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+    AOS.init();
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://unpkg.com/vue@3.4.21/dist/vue.global.js"></script>
+<script>
+	
+    const { createApp } = Vue;
+	
+    createApp({
+      // Vue app setup
+	  data() {
+		  return {
+			  hello: 'Vue data property',
+			  token: 'Gondola',
+			  ticker: 'GDLA',
+			  
+		  }
+	  }
+    }).mount('#app');
+  </script>
+</body>
+</html>
